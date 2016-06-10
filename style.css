@@ -225,6 +225,9 @@ footer {
 @media screen and (max-width: 1100px) {
   .navbar li a {
     padding: 45px 35px; } }
+@media screen and (max-width: 1024px) {
+  .maca {
+    margin-left: -80px; } }
 @media screen and (max-width: 1000px) {
   .navbar li a {
     padding: 45px 30px; } }
@@ -245,14 +248,13 @@ footer {
 @media screen and (max-width: 850px) {
   .navbar li a {
     padding: 0 22px; } }
-@media screen and (min-width: 768px) and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .navbar h5 {
     display: none; }
 
   .navbar ul {
     margin: 0 auto;
     text-align: center; }
-
   .navbar li a {
     padding: 0 16px;
     font-size: 16px; }
@@ -263,35 +265,12 @@ footer {
   .maca {
     position: static !important;
     background: none;
-    padding-top: 140px;
-    padding-left: 0; } }
+    width: 100%;
+    height: auto;
+    padding-top: 225px;
+    padding-left: 0;
+    margin-left: 0; } }
 @media screen and (max-width: 767px) {
-  .navbar ul {
-    text-align: center;
-    line-height: 1; }
-
-  .shrink ul {
-    display: none; }
-
-  .maca {
-    background: url("images/border-tablet.png") no-repeat rgba(255, 238, 219, 0.5);
-    background-position: 77% 25px;
-    position: relative;
-    z-index: 3;
-    font-size: 1.8em;
-    margin-left: 25px;
-    padding: -500px; }
-
-  .hero-img {
-    margin-top: -180px;
-    margin-bottom: -45px;
-    margin-left: -90px;
-    padding: 0; }
-
-  .page-break {
-    position: relative;
-    z-index: 4; } }
-@media screen and (max-width: 425px) {
   .hero {
     padding-top: 50px; }
 
@@ -299,7 +278,6 @@ footer {
     line-height: 0;
     padding-bottom: 13px;
     padding-top: 5px; }
-
   .navbar h5 {
     display: none; }
 
@@ -318,6 +296,9 @@ footer {
   .navbar-header h2 {
     margin-left: -100px; }
 
+  .follow h2 {
+    width: initial; }
+
   .img-mobile {
     display: initial;
     max-width: 100%;
@@ -328,16 +309,24 @@ footer {
 
   .maca {
     position: relative;
-    background: url("") no-repeat rgba(255, 238, 219, 0.5);
+    background: url("") no-repeat;
     height: 60px;
     padding-top: 0;
-    padding-left: 1100px;
-    margin: 140px 0 140px -335px;
-    font-size: 1.1em;
-    z-index: 5; }
+    font-size: 1.1em; }
 
   .donate {
     padding-top: 30px; } }
+@media screen and (max-width: 766px) {
+  .hero-img {
+    position: relative;
+    margin-top: -36px;
+    padding: 0;
+    z-index: 0; }
+
+  .maca {
+    position: relative;
+    margin-top: 80px;
+    z-index: 5; } }
 @media screen and (max-width: 375px) {
   .navbar li a {
     padding: 0 12px; } }

@@ -163,7 +163,7 @@ a {
     height:600px;
     h2 {
     padding:25px;
-width:400px;
+    width:400px;
     color:$copy-color;
     background-color:rgba(255,238,219,0.8);
 }
@@ -280,7 +280,6 @@ footer {
 }
 
 @media screen and (max-width:1350px) {
-
 .navbar li a {
     padding:45px 45px;
     font-size:18px;   
@@ -299,6 +298,11 @@ footer {
 } 
 }
 
+@media screen and (max-width:1024px) {
+    .maca {
+       margin-left:-80px; 
+    }
+}
 
 
 @media screen and (max-width:1000px) {
@@ -334,20 +338,21 @@ h5 {
          
 }
 
-@media screen and (min-width:768px) and (max-width:768px) {
+@media screen and (max-width:800px) {
 .navbar h5 {
     display:none;
 }
 
-.navbar ul {
+.navbar {
+    ul {
     margin:0 auto;
     text-align:center;
-}
-
-    .navbar li a {
+    }
+    li a {
     padding:0 16px;
     font-size: 16px;
-} 
+    }
+}
 
 .btn {
     margin-left:-15px;
@@ -356,59 +361,30 @@ h5 {
 .maca {
     position:static !important;
     background:none;
-    padding-top:140px;
+    width:100%;
+    height:auto;
+    padding-top:225px;
     padding-left:0;
+    margin-left:0;
 }
 
 }
 
 @media screen and (max-width:767px) {
- .navbar ul {
-        text-align:center;
-        line-height:1;
-    }
-
-.shrink ul {
-    display:none;
-}
-
-.maca {
-    background:url('images/border-tablet.png') no-repeat $muted-transparency;
-    background-position:77% 25px;
-    position:relative;
-    z-index:3;
-    font-size:1.8em;
-    margin-left:25px;
-    padding:-500px;
-}
-
-.hero-img {
-    margin-top:-180px;
-    margin-bottom:-45px;
-    margin-left:-90px;
-    padding:0;
-}
-
-.page-break {
-    position:relative;
-    z-index: 4;
-}
-}
-
-@media screen and (max-width:425px) {
 
     .hero {
         padding-top:50px;
     }
     
-    .navbar ul {
+    .navbar {
+        ul {
         line-height:0;
         padding-bottom:13px;
         padding-top:5px;
-    }
-    
-    .navbar h5 {
+        }
+        h5 {
         display:none;
+    }
     }
 
     .share {
@@ -431,6 +407,10 @@ h5 {
     margin-left:-100px;
 }
 
+.follow h2 {
+    width:initial;
+}
+
 .img-mobile {
     display: initial;
     max-width:100%;
@@ -443,19 +423,30 @@ h5 {
 
 .maca {
     position:relative;
-    background: url("") no-repeat $muted-transparency;
+    background: url("") no-repeat;
     height: 60px;
     padding-top:0;
-    padding-left:1100px;
-    margin:140px 0 140px -335px;
     font-size: 1.1em;
-    z-index:5;
 }
 
 .donate {
     padding-top:30px;
 }
 
+}
+
+@media screen and (max-width:766px) {
+    .hero-img {
+        position:relative;
+        margin-top:-36px;
+        padding:0;
+       z-index:0;
+    }
+    .maca {
+        position:relative;
+        margin-top:80px;
+        z-index:5;
+    }
 }
 
 @media screen and (max-width:375px) {
