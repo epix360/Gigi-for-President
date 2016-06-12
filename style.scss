@@ -67,6 +67,10 @@ body {
     background-color: $muted-color;
     color: $logo-color;
     }
+    a:active {
+    background-color: $muted-color;
+    color: $logo-color;
+    }
 }
 
 h1 {
@@ -107,23 +111,25 @@ li a {
 
 .hero {
     background:transparent;
-    background-color:white;
+    min-width:100%;
+    overflow:hidden;
 }
 
 .hero-img {
-
-    padding-top:135px;
     position:relative;
-    z-index:3;
+min-width:100%;
+margin:-15px;
+padding:0;
+z-index:1;
 }
 
 .maca {
     position:absolute;
     top:200px;
-    left:-800px;
+    left:-700px;
     background: url("images/border.png") no-repeat;
-    background-position:82%;
-    width:1520px;
+    background-position:645px;
+    width:1200px;
     height:310px;
     padding-top:45px;
     padding-left:640px;
@@ -147,7 +153,8 @@ li a {
     color:$logo-color;
     background-color:$muted-color;
     .fa-star {
-        background-color:$logo-color;
+        color:$logo-color;
+        text-shadow: none;
     }
 }
 a {
@@ -166,10 +173,10 @@ a {
     width:400px;
     color:$copy-color;
     background-color:rgba(255,238,219,0.8);
+
 }
 ul {
     margin-top:410px;
-    margin-left:50px;
 }
 li {
     padding:20px;
@@ -184,16 +191,13 @@ li {
     padding-top:10px;
     padding-bottom:10px;
     height:50px;
+    position:relative;
+    z-index:5;
 }
 
 .fa-star {
-    opacity:0.5;
-    background-color: $muted-color;
-    color: transparent;
-    text-shadow: 0px 2px 3px $muted-transparency;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
+    color: $main-color;
+    text-shadow: -1px -1px 0 #888;
 }
 
 .columns {
@@ -273,10 +277,23 @@ footer {
     padding:15px 0; 
 }
 
+@media screen and (min-width:1440px) {
+    .hero {
+    background:#cfcfcf;
+    }
+
+}
+
 @media screen and (min-width:992px) {
     .btn-donate {
     margin-top:50%;
 }
+}
+
+@media screen and (min-width:768px) {
+    .follow ul {
+            margin-left:50px;
+    }
 }
 
 @media screen and (max-width:1350px) {
@@ -300,7 +317,8 @@ footer {
 
 @media screen and (max-width:1024px) {
     .maca {
-       margin-left:-80px; 
+       margin-left:-10px; 
+       background:none;
     }
 }
 
@@ -309,6 +327,7 @@ footer {
     .navbar li a {
     padding:45px 30px;
 } 
+
 }
 
 @media screen and (max-width:900px) {
@@ -326,6 +345,11 @@ footer {
     color:$logo-color;
 }
 
+.navbar li a:active{
+    background:none;
+    color:$logo-color;
+}
+
 h5 {
     font-size:13px;
 }
@@ -335,57 +359,15 @@ h5 {
     .navbar li a {
     padding:0 22px;
 } 
+
+.maca {
+margin-left:-25px;
+}
          
 }
 
-@media screen and (max-width:800px) {
-.navbar h5 {
-    display:none;
-}
+@media screen and (max-width:768px) {
 
-.navbar {
-    ul {
-    margin:0 auto;
-    text-align:center;
-    }
-    li a {
-    padding:0 16px;
-    font-size: 16px;
-    }
-}
-
-.btn {
-    margin-left:-15px;
-}
-
-.maca {
-    position:static !important;
-    background:none;
-    width:100%;
-    height:auto;
-    padding-top:225px;
-    padding-left:0;
-    margin-left:0;
-}
-
-}
-
-@media screen and (max-width:767px) {
-
-    .hero {
-        padding-top:50px;
-    }
-    
-    .navbar {
-        ul {
-        line-height:0;
-        padding-bottom:13px;
-        padding-top:5px;
-        }
-        h5 {
-        display:none;
-    }
-    }
 
     .share {
         text-align:center;
@@ -395,47 +377,81 @@ h5 {
        line-height:0;
    } 
     
-    .btn {
-        margin-top:-10px;
-    }
-    
     .navbar li a {
     font-size: 14px;
 } 
 
-.navbar-header h2 {
-    margin-left:-100px;
-}
-
 .follow h2 {
     width:initial;
-}
-
-.img-mobile {
-    display: initial;
-    max-width:100%;
-    padding:0;
-}
-
-.img-full {
-    display:none;
-}
-
-.maca {
-    position:relative;
-    background: url("") no-repeat;
-    height: 60px;
-    padding-top:0;
-    font-size: 1.1em;
 }
 
 .donate {
     padding-top:30px;
 }
 
+.btn {
+    margin-left:-30px;
 }
 
-@media screen and (max-width:766px) {
+.list-inline {
+margin-left: 0px;
+}
+}
+@media screen and (max-width: 767px) {
+
+      .navbar h5 {
+    display: none; }
+
+  .navbar ul {
+    margin: 0 auto;
+    text-align: center; }
+  .navbar li a {
+    padding: 0 16px;
+    font-size: 16px; }
+
+  .btn {
+    margin-left: -15px; }
+
+  .maca {
+    position: static !important;
+    background: none;
+    width: 100%;
+    height: auto;
+    padding-top: 225px;
+    padding-left: 0;
+    margin-left: 0; } 
+  .hero {
+    padding-top: 50px; }
+
+  .navbar ul {
+    line-height: 0;
+    padding-bottom: 13px;
+    padding-top: 5px; }
+  .navbar h5 {
+    display: none; }
+
+  .share {
+    text-align: center; }
+
+  .shrink {
+    line-height: 0; }
+
+  .btn {
+    margin-top: -10px; }
+
+  .navbar li a {
+    font-size: 14px; }
+
+  .navbar-header h2 {
+    margin-left: -100px; }
+
+  .follow h2 {
+    width: initial; }
+
+
+  .donate {
+    padding-top: 30px; } 
+
     .hero-img {
         position:relative;
         margin-top:-36px;
@@ -443,16 +459,52 @@ h5 {
        z-index:0;
     }
     .maca {
+        margin-top:-5px;
         position:relative;
-        margin-top:80px;
         z-index:5;
-    }
+            background: url("") no-repeat;
+    height: 60px;
+    padding-top: 80px;
+    font-size: 1.1em;
+    }    
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:765px) {
     .navbar li a {
         padding:0 12px;
     }
+        .follow .list-inline {
+        padding-right:-100px;
+    }
+
+    .hero h1 {
+        position:relative;
+        z-index:99;
+    }
+
+    .hero-img {
+    position:relative;
+    z-index:-1;
+    }
+
+}
+
+@media screen and (max-width:414px) {
+      .img-mobile {
+    display: initial;
+    max-width: 100%;
+    padding: 0; 
+    margin-top:-100px;
+    }
+
+  .img-full {
+    display: none; 
+}
+
+.maca {
+    margin-top:80px;
+    padding-top: 0;
+}
 }
 
 @media screen and (max-width:320px) {
@@ -462,6 +514,10 @@ h5 {
     
         .btn {
         font-size:1.2em;
+    }
+    .hero h1 {
+margin-top: 65px;
+    margin-bottom: 30px;
     }
 }
 
