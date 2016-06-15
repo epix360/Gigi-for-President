@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -273,8 +274,8 @@
     <footer>
         <div class="container">
             <div class="row">
-                <small class="col-xs-10">Paid for by the Coalition for a Cuter America</small>
-                <small class="col-xs-2"><a href="Disclaimer.pdf?utm_source=main&utm_medium=link&utm_campaign=disclaimer">Disclaimer</a></small>
+                <small class="col-xs-12 col-sm-10">Paid for by the Coalition for a Cuter America</small>
+                <small class="col-xs-12 col-sm-2"><a href="Disclaimer.pdf?utm_source=main&utm_medium=link&utm_campaign=disclaimer">Disclaimer</a></small>
             </div>
         </div>
     </footer>
@@ -284,33 +285,7 @@
     <script src='js/parallax.min.js'></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-    <script>
-        //Shrinks navbar
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 40) {
-                $('nav').addClass('shrink');
-
-            } else {
-                $('nav').removeClass('shrink');
-            }
-        });
-        //Smooth Scroll
-        $(function() {
-            $('a[href*="#"]:not([href="#"])').click(function() {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    if (target.length) {
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 500);
-                        return false;
-                    }
-                }
-            });
-        });
-
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>

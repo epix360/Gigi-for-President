@@ -6,7 +6,20 @@
 $secondary-color:#7D82B8;
 $logo-color:#ff44d7;
 $muted-color:#FFEEDB;
-$copy-color:#424B54;*/
+$copy-color:#424B54;
+$muted-transparency:rgba(255,238,219,0.5);
+$muted-logo-color:rgba(255,68,215, 1);*/
+
+.page-content {
+background-color:white;
+ margin-top:75px;
+padding-left:100px;
+}
+
+.page-content .wrapper {
+max-width:100%;
+        
+}
 body {
   background: #FFB8D1;
   font-family: 'Montserrat', sans-serif;
@@ -157,7 +170,8 @@ h1 {
   text-align: center; }
 
 .platform {
-  padding: 50px 0 150px 0; }
+  padding: 50px 0 150px 0;
+  background-color: rgba(255, 238, 219, 0.5); }
   .platform h2 {
     padding: 50px; }
   .platform .fa {
@@ -171,6 +185,7 @@ h1 {
   color: #F0386B; }
 
 .about {
+  background-color: rgba(255, 238, 219, 0.5);
   font-size: 1.3em; }
   .about h2 {
     margin-top: 105px; }
@@ -194,6 +209,7 @@ h1 {
 
 .donate {
   background: transparent;
+  background-color: rgba(103, 125, 165, 0.6);
   color: #F5E6C9; }
 
 dt {
@@ -285,6 +301,10 @@ footer {
   .navbar h5 {
     display: none; }
 
+  .navbar ul {
+    margin: 0 auto;
+    text-align: center; }
+
   .navbar li a {
     padding: 0 16px;
     font-size: 16px; }
@@ -307,9 +327,7 @@ footer {
   .navbar ul {
     line-height: 0;
     padding-bottom: 13px;
-    padding-top: 5px;
-    margin: 0 auto;
-    text-align: center; }
+    padding-top: 5px; }
 
   .navbar h5 {
     display: none; }
